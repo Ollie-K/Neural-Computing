@@ -1,0 +1,29 @@
+Instructions to run on a City University Lab machine:
+1. Extract all files from this zip file
+2. Open a conda shell & navigate to the Submission folder
+3. Run the commmand: 
+	$ conda env create --file ok_environment.yaml
+4. Run the command: 
+	$ conda activate ok_nc_env
+	NB - if a popup is seeing requiring admin details to allow python.exe to make changes to computer, you may select 'no'. The installation of the environment should still complete without issue.
+5. To perform testing only, run the command:
+	$ jupyter notebook "OKeers NC Testing.ipynb" 
+6. Run all cells in the notebook (n.b. the final cell, 57, initiates 1000 prediction runs for both models for timing purposes. This takes a long time to complete; feel free to omit.
+7. To remove the environment, run the commands:
+	$ conda deactivate
+	$ conda env remove --name ok_nc_env
+
+Guide to files within this folder:
+data_full.json - dataset
+OK NC Report.pdf - written report including glossary & implementation details
+ok_nc_env.yaml - yaml environment file for reproducing the environment
+OKeers MLP.html - html export of Multilayer Perceptron Training notebook
+OKeers MLP.ipynb - Multilayer Perceptron Training notebook
+OKeers NC Testing.html - html export of testing notebook (both models)
+OKeers NC Testing.ipynb - testing notebook (both models)
+OKeers SVM.html - html export of Support Vector Machine Training notebook
+OKeers SVM.ipynb - Support Vector Machine Training notebook
+oklsvc.pkl - pickled Support Vector Machine model
+okmlp.pkl - pickled Multilayer Perceptron model
+requirements.txt - package details, as installed on the Mac used for development & testing.
+setup_instructions.txt - this file
